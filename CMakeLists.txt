@@ -46,7 +46,7 @@ install (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
 
 
 include(CTest)
-         
+set (CTEST_PROJECT_NAME "Tutorial")         
 
 # does the application run
 add_test (TutorialRuns Tutorial 25)
