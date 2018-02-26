@@ -1,0 +1,3 @@
+Why isn't USE_MyMath budging by changing ON to OFF in cmakelists top level ?
+
+why doesn't my computer has log and exp ? whereas in cmake tutorial it's written that it's present in every computer ?

@@ -4,6 +4,12 @@
 // a hack square root calculation using simple operations
 double mysqrt(double x)
 {
+// if we have both log and exp then use them
+#if defined(HAVE_LOG) && defined(HAVE_EXP)
+  fprintf(stdout, "LOG and EXP found yayy!\n");
+  result = exp(log(x) * 0.5);
+#else // otherwise use an iterative approach
+
   if (x <= 0) {
     return 0;
   }
@@ -22,5 +28,9 @@ double mysqrt(double x)
     result = result + 0.5 * delta / result;
     fprintf(stdout, "Computing sqrt of %g to be %g\n", x, result);
   }
+
+#endif
+
   return result;
+
 }

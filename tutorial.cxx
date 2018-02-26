@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "TutorialConfig.h"
+#include "TutorialConfig.h" // can come because cmake includes the library path will linking!! See install or build folder
 #ifdef USE_MYMATH
 #include "MathFunctions.h"
 #endif
