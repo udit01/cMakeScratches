@@ -1,3 +1,11 @@
+#[[
+/*! \brief Makefile for Mathfunctions library
+ *
+ *  Has the customs command for MakeTable, include directories in which binaries are located to 
+ *  search the path for include files. install targets of this library also specified.
+ *
+ */
+]]
 # first we add the executable that generates the table
 add_executable(MakeTable MakeTable.cxx)
 

@@ -1,4 +1,9 @@
-// A simple program that computes the square root of a number
+/*! \brief Square Root of a number.
+ *         Brief description of this cxx file.
+ *
+ *  A simple program that computes the square root of a number.
+ *  Uses different techniques by different cMake flags
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

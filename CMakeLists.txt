@@ -1,9 +1,18 @@
+#[[
+/*! \brief Makefile for Main Project
+ *
+ * Contains project version number, check_function exists logic, made bool to use custom
+ * math functions library implementations, has header generation/configuration file.
+ * Added and linked EXTRA_LIBS to executable file, specified the local bin as intsall targets.
+ * Made unit tests and macros for making more test cases.
+ * 
+ */
+]]
 cmake_minimum_required (VERSION 2.6)
 project (Tutorial)
 # The version number.
 set (Tutorial_VERSION_MAJOR 1)
 set (Tutorial_VERSION_MINOR 0)
-
 
 # does this system provide the log and exp functions? If it does then use them for efficiency
 # include (CheckFunctionExists) # this is the non verbose command of below command
@@ -23,7 +32,7 @@ configure_file (
   )
  
 # add the binary tree to the search path for include files
-# so that we will find TutorialConfig.h
+# so that we will find TutorialConfig.h which will be generated from TutorialConfig.h.in 
 include_directories("${PROJECT_BINARY_DIR}")
 
 # add the MathFunctions library?
@@ -33,7 +42,7 @@ if (USE_MYMATH)
   set (EXTRA_LIBS ${EXTRA_LIBS} MathFunctions)
 endif (USE_MYMATH)
  
-# add the executable
+# add the executable 
 add_executable (Tutorial tutorial.cxx)
 target_link_libraries (Tutorial  ${EXTRA_LIBS})
 
@@ -58,7 +67,6 @@ set_tests_properties (TutorialUsage
   )
 
 ## Now a Macro! (then what was add_test ?)
-
 #define a macro to simplify adding tests, then use it
 macro (do_test arg result)
   add_test (TutorialComp${arg} Tutorial ${arg})

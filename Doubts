@@ -1,3 +1,6 @@
 Why isn't USE_MyMath budging by changing ON to OFF in cmakelists top level ?
 
 why doesn't my computer has log and exp ? whereas in cmake tutorial it's written that it's present in every computer ?
+
+even if you manage to somehow, make a reciever on devclub VM end then too, how will you config that URL and required HTTP_HEADERS an the .cmake script ?
+How do you transfer data to cmake scripts because you are building seperately

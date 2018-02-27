@@ -1,9 +1,12 @@
-// A simple program that builds a sqrt table
+/*! \brief Tabulating Squareroot Calculation
+ *
+ *  Making a table in a file for faster squareroot calculation
+ */ 
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-int main(int argc, char *argv[])
+    int main(int argc, char *argv[])
 {
     int i;
     double result;

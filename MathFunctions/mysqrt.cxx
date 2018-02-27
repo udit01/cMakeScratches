@@ -1,7 +1,11 @@
+/*! \brief Hack squareroot calculation
+ *
+ *  A hack square root calculation using simple operations.
+ *  Uses Exp or Log depending on their availibility (checked by CMake)
+ */
 #include "MathFunctions.h"
 #include <stdio.h>
-
-// a hack square root calculation using simple operations
+ 
 double mysqrt(double x)
 {
 // if we have both log and exp then use them
